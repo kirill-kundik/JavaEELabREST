@@ -27,13 +27,11 @@ public class CustomerController {
     }
 
     @GetMapping
-    @ResponseStatus(HttpStatus.FOUND)
     public List<Customer> getCustomers() {
         return customerService.getCustomers();
     }
 
     @GetMapping("/{id}")
-    @ResponseStatus(HttpStatus.FOUND)
     public Customer getCustomerById(@PathVariable int id) {
         return customerService.getCustomerById(id);
     }
